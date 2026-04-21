@@ -196,12 +196,22 @@
                     </a>
                 </div>
 
-                <button class="md:hidden text-white/70 hover:text-white">
+                <button class="md:hidden text-white/70 hover:text-white" id="mobile-menu-btn">
                     <i class="ph ph-list text-2xl"></i>
                 </button>
             </div>
         </div>
     </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-black/90 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 flex flex-col justify-center items-center gap-8">
+        <a href="#services" class="mobile-link text-2xl font-medium text-white">Especialidades</a>
+        <a href="#portfolio" class="mobile-link text-2xl font-medium text-white">Portfólio</a>
+        <a href="#cases" class="mobile-link text-2xl font-medium text-white">Resultados</a>
+        <a href="#about" class="mobile-link text-2xl font-medium text-white">Opiniões</a>
+        <a href="#contact" class="mobile-link mt-4 px-8 py-4 rounded-full bg-white/10 border border-white/20 text-white text-xl font-medium">
+            Iniciar Projeto
+        </a>
+    </div>
 
     <main>
         <section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
@@ -288,26 +298,16 @@
         </section>
 
         <section id="portfolio" class="py-32 relative z-10 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-6 lg:px-8 mb-16 flex flex-col md:flex-row justify-between items-end gap-6 reveal">
-                <div>
-                    <h2 class="font-heading font-bold text-3xl md:text-5xl mb-4 text-gradient-silver">Trabalhos Selecionados</h2>
-                    <p class="text-gradient-gray max-w-xl">Explore projetos onde fundimos visão artística com estratégias de persuasão para criar líderes de categoria em seus nichos.</p>
-                </div>
-                <div class="flex gap-4">
-                    <button id="prevBtn" class="w-12 h-12 rounded-full glass-panel flex items-center justify-center hover:bg-white/10 transition-colors text-white">
-                        <i class="ph ph-caret-left text-xl"></i>
-                    </button>
-                    <button id="nextBtn" class="w-12 h-12 rounded-full glass-panel flex items-center justify-center hover:bg-white/10 transition-colors text-white">
-                        <i class="ph ph-caret-right text-xl"></i>
-                    </button>
-                </div>
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 mb-16 text-center md:text-left reveal">
+                <h2 class="font-heading font-bold text-3xl md:text-5xl mb-4 text-gradient-silver">Trabalhos Selecionados</h2>
+                <p class="text-gradient-gray max-w-xl mx-auto md:mx-0">Explore projetos onde fundimos visão artística com estratégias de persuasão para criar líderes de categoria em seus nichos.</p>
             </div>
 
-            <div class="w-full pl-6 lg:pl-[calc((100vw-1280px)/2+2rem)] reveal">
-                <div id="carousel" class="flex gap-8 overflow-x-auto hide-scrollbar pb-10 cursor-grab active:cursor-grabbing snap-x snap-mandatory">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 reveal">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 pb-10">
                     
-                    <div class="min-w-[85vw] md:min-w-[600px] flex-shrink-0 snap-center group relative cursor-pointer project-trigger" data-url="https://pt.wikipedia.org/wiki/Fitness" data-title="Consultoria Fitness Elite">
-                        <div class="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden mb-6 shadow-2xl">
+                    <div class="group relative cursor-pointer project-trigger" data-url="https://pt.wikipedia.org/wiki/Fitness" data-title="Consultoria Fitness Elite">
+                        <div class="relative h-[350px] md:h-[450px] rounded-3xl overflow-hidden mb-6 shadow-2xl">
                             <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10"></div>
                             <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1600&auto=format&fit=crop" alt="Landing Page Personal Trainer" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute top-6 left-6 z-20">
@@ -327,8 +327,8 @@
                         <p class="text-gradient-gray text-sm">Landing page de alta conversão focada em planos de consultoria esportiva e captação de alunos.</p>
                     </div>
 
-                    <div class="min-w-[85vw] md:min-w-[600px] flex-shrink-0 snap-center group relative cursor-pointer project-trigger" data-url="https://pt.wikipedia.org/wiki/Gastronomia" data-title="Portfólio Chef Culinário">
-                        <div class="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden mb-6 shadow-2xl">
+                    <div class="group relative cursor-pointer project-trigger" data-url="https://pt.wikipedia.org/wiki/Gastronomia" data-title="Portfólio Chef Culinário">
+                        <div class="relative h-[350px] md:h-[450px] rounded-3xl overflow-hidden mb-6 shadow-2xl">
                             <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10"></div>
                             <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=1600&auto=format&fit=crop" alt="Portfólio Culinário" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute top-6 left-6 z-20">
@@ -348,8 +348,8 @@
                         <p class="text-gradient-gray text-sm">Site imersivo e de alto padrão visual, destacando pratos autorais e serviços de personal chef.</p>
                     </div>
 
-                    <div class="min-w-[85vw] md:min-w-[600px] flex-shrink-0 snap-center group relative cursor-pointer project-trigger" data-url="https://pt.wikipedia.org/wiki/Fast-food" data-title="Site Vendas Hamburgueria">
-                        <div class="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden mb-6 shadow-2xl">
+                    <div class="group relative cursor-pointer project-trigger" data-url="https://pt.wikipedia.org/wiki/Fast-food" data-title="Site Vendas Hamburgueria">
+                        <div class="relative h-[350px] md:h-[450px] rounded-3xl overflow-hidden mb-6 shadow-2xl">
                             <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10"></div>
                             <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1600&auto=format&fit=crop" alt="Site Fast Food" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute top-6 left-6 z-20">
@@ -369,8 +369,8 @@
                         <p class="text-gradient-gray text-sm">Site de vendas com vitrine de produtos otimizada para envio de pedidos estruturados via WhatsApp.</p>
                     </div>
 
-                    <div class="min-w-[85vw] md:min-w-[600px] flex-shrink-0 snap-center group relative cursor-pointer project-trigger pr-6 lg:pr-[calc((100vw-1280px)/2+2rem)]" data-url="https://pt.wikipedia.org/wiki/Est%C3%A9tica" data-title="Clínica Harmony - VSL">
-                        <div class="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden mb-6 shadow-2xl">
+                    <div class="group relative cursor-pointer project-trigger" data-url="https://pt.wikipedia.org/wiki/Est%C3%A9tica" data-title="Clínica Harmony - VSL">
+                        <div class="relative h-[350px] md:h-[450px] rounded-3xl overflow-hidden mb-6 shadow-2xl">
                             <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10"></div>
                             <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=1600&auto=format&fit=crop" alt="Clínica de Estética" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute top-6 left-6 z-20">
@@ -520,36 +520,36 @@
                     Transformamos seu serviço em uma máquina de vendas online. Vagas limitadas para assumir novos projetos este mês.
                 </p>
 
-                <div class="glass-panel inline-flex flex-col items-center p-8 md:p-10 rounded-[2rem] mb-12 border border-red-500/30 relative overflow-hidden shadow-[0_0_60px_rgba(239,68,68,0.15)] transform hover:scale-[1.02] transition-transform duration-500">
+                <div class="glass-panel w-full sm:w-auto mx-auto inline-flex flex-col items-center p-6 sm:p-8 md:p-10 rounded-[2rem] mb-12 border border-red-500/30 relative overflow-hidden shadow-[0_0_60px_rgba(239,68,68,0.15)] transform hover:scale-[1.02] transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-b from-red-500/10 to-transparent mix-blend-screen pointer-events-none"></div>
                     <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50"></div>
                     
-                    <span class="text-red-400 text-xs md:text-sm font-bold uppercase tracking-[0.2em] mb-8 z-10 flex items-center gap-2">
-                        <span class="relative flex h-2 w-2">
+                    <span class="text-red-400 text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.2em] mb-8 z-10 flex items-center gap-2 text-center">
+                        <span class="relative flex h-2 w-2 shrink-0">
                             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                             <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                         </span>
                         Oferta Exclusiva Encerra Em:
                     </span>
                     
-                    <div class="flex gap-4 md:gap-8 items-center z-10">
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="bg-black/40 border border-white/5 rounded-2xl w-full py-4 mb-2 shadow-inner">
-                                <span id="cd-hours" class="font-heading font-black text-5xl md:text-6xl text-white">02</span>
+                    <div class="flex gap-2 sm:gap-4 md:gap-8 items-center z-10 w-full justify-center">
+                        <div class="flex flex-col items-center flex-1 min-w-[60px] sm:min-w-[80px]">
+                            <div class="bg-black/40 border border-white/5 rounded-2xl w-full py-3 sm:py-4 mb-2 shadow-inner">
+                                <span id="cd-hours" class="font-heading font-black text-4xl sm:text-5xl md:text-6xl text-white">02</span>
                             </div>
                             <span class="text-[10px] md:text-xs text-gradient-gray uppercase font-bold tracking-widest">Horas</span>
                         </div>
-                        <span class="text-4xl text-white/20 -mt-8 font-light">:</span>
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="bg-black/40 border border-white/5 rounded-2xl w-full py-4 mb-2 shadow-inner">
-                                <span id="cd-mins" class="font-heading font-black text-5xl md:text-6xl text-white">45</span>
+                        <span class="text-2xl sm:text-4xl text-white/20 -mt-6 sm:-mt-8 font-light">:</span>
+                        <div class="flex flex-col items-center flex-1 min-w-[60px] sm:min-w-[80px]">
+                            <div class="bg-black/40 border border-white/5 rounded-2xl w-full py-3 sm:py-4 mb-2 shadow-inner">
+                                <span id="cd-mins" class="font-heading font-black text-4xl sm:text-5xl md:text-6xl text-white">45</span>
                             </div>
                             <span class="text-[10px] md:text-xs text-gradient-gray uppercase font-bold tracking-widest">Minutos</span>
                         </div>
-                        <span class="text-4xl text-white/20 -mt-8 font-light">:</span>
-                        <div class="flex flex-col items-center min-w-[80px]">
-                            <div class="bg-black/40 border border-white/5 rounded-2xl w-full py-4 mb-2 shadow-inner">
-                                <span id="cd-secs" class="font-heading font-black text-5xl md:text-6xl text-primary drop-shadow-[0_0_15px_rgba(147,51,234,0.5)]">30</span>
+                        <span class="text-2xl sm:text-4xl text-white/20 -mt-6 sm:-mt-8 font-light">:</span>
+                        <div class="flex flex-col items-center flex-1 min-w-[60px] sm:min-w-[80px]">
+                            <div class="bg-black/40 border border-white/5 rounded-2xl w-full py-3 sm:py-4 mb-2 shadow-inner">
+                                <span id="cd-secs" class="font-heading font-black text-4xl sm:text-5xl md:text-6xl text-primary drop-shadow-[0_0_15px_rgba(147,51,234,0.5)]">30</span>
                             </div>
                             <span class="text-[10px] md:text-xs text-gradient-gray uppercase font-bold tracking-widest">Segundos</span>
                         </div>
@@ -557,8 +557,8 @@
                 </div>
 
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <button onclick="window.open('https://wa.me/5511999999999', '_blank')" class="px-10 py-5 rounded-full bg-white text-black font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-[0_0_30px_rgba(255,255,255,0.3)] flex items-center justify-center gap-3">
-                        <i class="ph-fill ph-whatsapp text-2xl text-green-500"></i> Agendar Reunião via WhatsApp
+                    <button onclick="window.open('https://wa.me/5511999999999', '_blank')" class="px-10 py-5 rounded-full bg-white text-black font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-[0_0_30px_rgba(255,255,255,0.3)] flex items-center justify-center gap-3 w-full sm:w-auto">
+                        <i class="ph-fill ph-whatsapp text-2xl text-green-500"></i> Agendar Reunião
                     </button>
                 </div>
             </div>
@@ -570,7 +570,7 @@
                     <img src="https://placehold.co/120x30/000000/ffffff?text=LOGO" alt="Logo Rodapé" class="h-6 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
                 </div>
                 
-                <p class="text-gradient-gray text-sm">© 2026. Arquitetado para excelência e alta conversão.</p>
+                <p class="text-gradient-gray text-sm text-center md:text-left">© 2026. Arquitetado para excelência e alta conversão.</p>
                 
                 <div class="flex gap-4 text-white/50">
                     <a href="https://www.instagram.com/sua_agencia" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Instagram">
@@ -742,44 +742,7 @@
                 });
             });
 
-            // --- 5. Lógica de Drag & Botões do Carrossel ---
-            const carousel = document.getElementById('carousel');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            let isDown = false;
-            let startX;
-            let scrollLeft;
-
-            prevBtn.addEventListener('click', () => {
-                carousel.scrollBy({ left: -600, behavior: 'smooth' });
-            });
-            nextBtn.addEventListener('click', () => {
-                carousel.scrollBy({ left: 600, behavior: 'smooth' });
-            });
-
-            carousel.addEventListener('mousedown', (e) => {
-                isDown = true;
-                carousel.classList.remove('snap-x', 'snap-mandatory'); 
-                startX = e.pageX - carousel.offsetLeft;
-                scrollLeft = carousel.scrollLeft;
-            });
-            carousel.addEventListener('mouseleave', () => {
-                isDown = false;
-                carousel.classList.add('snap-x', 'snap-mandatory');
-            });
-            carousel.addEventListener('mouseup', () => {
-                isDown = false;
-                carousel.classList.add('snap-x', 'snap-mandatory');
-            });
-            carousel.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - carousel.offsetLeft;
-                const walk = (x - startX) * 2; 
-                carousel.scrollLeft = scrollLeft - walk;
-            });
-
-            // --- 6. Lógica do Iframe (Modal) ---
+            // --- 5. Lógica do Iframe (Modal) ---
             const modal = document.getElementById('project-modal');
             const modalContent = document.getElementById('project-modal-content');
             const modalBackdrop = document.getElementById('modal-backdrop');
@@ -836,9 +799,6 @@
 
             triggers.forEach(trigger => {
                 trigger.addEventListener('click', (e) => {
-                    // Prevenir clique falso se o usuário estava apenas arrastando o card no carrossel
-                    if(isDown) return; 
-                    
                     const url = trigger.getAttribute('data-url');
                     const title = trigger.getAttribute('data-title');
                     
@@ -859,7 +819,7 @@
             });
 
 
-            // --- 7. Contador de Visualizações ao Vivo ---
+            // --- 6. Contador de Visualizações ao Vivo ---
             const viewerCountEl = document.getElementById('viewer-count');
             if (viewerCountEl) {
                 // Começa com um número aleatório realista alto
@@ -885,7 +845,7 @@
                 }, 3500); // Atualiza a cada 3.5 segundos
             }
 
-            // --- 8. Contador Regressivo (Urgência) ---
+            // --- 7. Contador Regressivo (Urgência) ---
             const hoursEl = document.getElementById('cd-hours');
             const minsEl = document.getElementById('cd-mins');
             const secsEl = document.getElementById('cd-secs');
@@ -916,4 +876,4 @@
         });
     </script>
 </body>
-</html>
+</html>git 
